@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html dir="rtl">
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>درگاه پرداخت ترون</title>
+        <link rel="stylesheet" href="tronpay/css/font.css">
+        <link rel="stylesheet" href="tronpay/css/main.css">
+    </head>
+    <body>
+        <div class="section">
+            <div class="box">
+                <img src="tronpay/img/trx.jpg">
+                <h1>مشخصات پرداخت</h1>
+                <div class="payment">
+                    <div class="detail">
+                        <span>مبلغ فاکتور : </span>
+                        <div class="detailbox copyTarget">
+                            <span>{amount} تومان</span>
+                        </div>
+                    </div>
+                    <div class="detail">
+                        <span>کیف پول : </span>
+                        <div class="detailbox copyTarget">
+                            <span>{wallet}</span>
+                        </div>
+                    </div>
+                    <div class="detail">
+                        <span>قیمت ترون : </span>
+                        <div class="detailbox copyTarget">
+                            <span>{trxprice} تومان</span>
+                        </div>
+                    </div>
+                    <div class="detail">
+                        <span>مقدار ترون: </span>
+                        <div class="detailbox copyTarget">
+                            <span>{trxamount} عدد</span>
+                        </div>
+                    </div>
+                </div>
+                <button class="checkout" onclick="checkout({invoiceid})">پرداخت کردم</button>
+            </div>
+        </div>
+        <script src="tronpay/js/main.js"></script>
+    </body>
+</html>

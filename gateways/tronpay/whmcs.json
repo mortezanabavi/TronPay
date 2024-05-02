@@ -1,0 +1,25 @@
+{
+  "schema": "1.0",
+  "type": "whmcs-gateways",
+  "name": "tronpay",
+  "license": "proprietary",
+  "category": "payments",
+  "description": {
+    "name": "Tron Pay",
+    "tagline": "Accepts payment by receiving Tron currency"
+  },
+  "logo": {
+      "filename": "img/trx.jpg"
+  },
+  "support" : {
+      "homepage" : "https:\/\/www.CheetahCloud.site\/",
+      "email" : "info@CheetahCloud.site",
+      "support_url": "https:\/\/telegram.me\/CheetahCloud"
+  },
+  "authors": [
+    {
+      "name": "CheetahCloud",
+      "homepage": "https:\/\/www.CheetahCloud.site\/"
+    }
+  ]
+}
