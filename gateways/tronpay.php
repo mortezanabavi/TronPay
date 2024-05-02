@@ -197,7 +197,7 @@ else if (strtoupper($_SERVER['REQUEST_METHOD']) === 'POST' && is_numeric($_POST[
     
         $client = Capsule::table('tblclients')->where('id', $_SESSION['uid'])->first();
         $amount = ceil($invoice->total * ($gatewayParams['currencyType'] == 'IRT' ? 1 : 10));
-		$trxPrice = get_trx_price();
+	$trxPrice = get_trx_price();
         $amounttrx = round($amount/$trxPrice,2);
         $transactionId = Capsule::table('mod_tronpay_transactions')
         ->where('user_id', $client->id)
@@ -227,7 +227,7 @@ else if (strtoupper($_SERVER['REQUEST_METHOD']) === 'POST' && is_numeric($_POST[
         $html = file_get_contents("tronpay/main.html");
         $html = str_replace('{amount}', number_format($amount), $html);
         $html = str_replace('{wallet}', $address, $html);
-        $html = str_replace('{trxprice}', "5,263", $html);
+        $html = str_replace('{trxprice}', $trxPrice, $html);
         $html = str_replace('{trxamount}', $amounttrx, $html);
         $html = str_replace('{invoiceid}', $invoice->id, $html);
         echo $html;
