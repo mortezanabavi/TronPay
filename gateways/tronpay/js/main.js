@@ -63,7 +63,7 @@ function checkout(invoice) {
       .then(data => {
             if (data['result'] == true) {
                 showCustomAlert("پرداخت انجام شد.", "#65CCA2");
-                window.location.href = `https://${window.location.hostname}/viewinvoice.php?id="+invoice`;
+                window.location.href = `https://${window.location.hostname}/viewinvoice.php?id=${invoice}`;
             } else if (data['status'] == 404) {
                 showCustomAlert("فاکتور یافت نشد.", "#B33420");
             } else if (data['status'] == 500) {
